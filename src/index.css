@@ -48,19 +48,20 @@ body{
 .search__container{
   position: absolute;
   height: 50%;
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
   gap: 20px;
   z-index: 1;
-
+  max-width: 1220px;
 }
 
 .search__title__container{
   text-align: center;
   width: 100%;
+  padding: 10px 0 0 0 ;
 }
 
 .title{
@@ -107,7 +108,7 @@ border-top-right-radius: 10px;
 .searc__result__container{
   
 width: 100%;
-height: 45%;
+/* height: 45%; */
 border-radius: 10px;
 background: white;
 display: flex;
@@ -119,13 +120,14 @@ box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 .information__container{
-  height: 70%;
-  width: 25%;
+  height: 100%;
+  width: 50%;
   padding: 10px 20px;
   border-right: 1px solid var(--DarkGray);
   display: flex;
   flex-direction: column;
   min-height: 60px;
+  
   
 }
 
@@ -146,4 +148,83 @@ box-shadow: 0 0 8px rgba(0,0,0,0.2);
   font-weight: 700;
   color:var(--VeryDarkGray);
 
+}
+
+
+
+
+/* ------------------------ RESPONSIVE ------------------------------------- */
+@media (max-width: 768px) { 
+
+  
+  /* .main__section{
+    height:100vh;
+    
+  
+  } */
+  .title{
+    font-size: 20px;
+  }
+  .search__container{
+    height: fit-content;
+    padding: 10px 0px;
+    
+  }
+
+  
+  .searc__result__container{
+    display: flex;
+    flex-direction: column;
+    padding:15px 0px;
+    height: fit-content;
+  }
+
+  .information__container{
+    border: none;
+    align-items: center;
+    width: 100%;
+  }
+
+  .input__search{
+    min-height: 40px;
+  }
+  .button__search{
+    width: 50px;
+    min-height: 40px;
+    background: center url('./images/icon-arrow.svg') no-repeat, var(--VeryDarkGray);
+  }
+
+  .search__title__container{
+    padding: 10px 0 0 0 ;
+  }
+  .information__title{
+    font-size: 8px;
+  }
+
+  .information__description{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) { 
+
+  .input__search{
+    width: 100%;
+  }
+  
+}
+
+
+@media (min-height: 950px) { 
+
+  .title{
+    font-size: 40px;
+  }
+  .search__container{
+    gap:40px;
+    justify-content: center;
+  }
+  .search__input__container{
+    max-height: 80px;
+  }
 }
